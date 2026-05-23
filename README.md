@@ -1,4 +1,6 @@
-# Building Massively Multimodal Foundation Models with Interaction-Aware Experts
+# Massively Multimodal Foundation Models: A Framework for Capturing Interactions with Specialized Mixture-of-Experts
+
+Implementation of the MERGE model published in ICLR'26. Paper can be found [here](https://openreview.net/pdf?id=qF9WJxvHX8).
 
 ## Requirements
 You can install them using:
@@ -30,9 +32,12 @@ The current implementation supports two methods for estimating RUS values for mu
    - Proposed in the MERGE paper.
    - More computationally efficient for longer temporal sequences (e.g., more than 10 time steps).
 
-### Usage
+#### Usage
 
 Specify the estimator method in `run_pamap_data.sh`:
+
+#### Reference
+[1] Liang et al., Quantifying & Modeling Multimodal Interactions: An Information Decomposition Framework, NeurIPS 2023.
 
 ## Code Structure
 
@@ -41,3 +46,16 @@ The implementation is divided into two parts, (1) compute temporal RUS values, a
 - `train_pamap_multimodal.py`: Trains the multimodal MoE on a cross-subject split. Subjects are partitioned via `--train_subjects` / `--val_subjects` / `--test_subjects` (defaults `1-6` / `7` / `8-9`, matching the MERGE paper). Each subject's windows are paired with that subject's RUS values, so RUS for val/test subjects is only consumed at inference.
 
 Computing temporal RUS values can take some time, especially for high-dimensional datasets. But for each dataset, it only needs to be computed once: the obtained RUS values are stored in the `results` folder and can be reused later. You can comment out the `python pamap_rus_multimodal.py` command in the `run_pamap_data.sh` script if the desired RUS values have already been computed.
+
+## Citation
+
+```
+@inproceedings{
+han2026massively,
+title={Massively Multimodal Foundation Models: A Framework for Capturing Interactions with Specialized Mixture-of-Experts},
+author={Xing Han and Hsing-Huan Chung and Joydeep Ghosh and Paul Pu Liang and Suchi Saria},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=qF9WJxvHX8}
+}
+```
