@@ -485,7 +485,6 @@ def analyze_subject(subject_id, args, device):
         np.save(all_output_path, all_pid_results, allow_pickle=True)
         print("Saving all modality pairs complete.")
 
-    # --- Print summary of dominant terms ---
     if dominant_pid_results:
         dominance_counts = {'R': 0, 'U1': 0, 'U2': 0, 'S': 0}
         for result in dominant_pid_results:
@@ -502,7 +501,6 @@ def analyze_subject(subject_id, args, device):
     else:
         print("No dominant PID terms found with the current threshold and percentage criteria.")
 
-    # --- Print modality information summary ---
     print("\n--- Modality Information Summary ---")
     for mod_name, sensors in modality_sensors.items():
         print(f"Modality '{mod_name}': {len(sensors)} features")

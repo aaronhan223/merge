@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Set global variables for shared hyper-parameters
-subject_ids="1-9"          # All PAMAP subjects: per-subject RUS values
-train_subjects="1-6"       # Subjects used for training
-val_subjects="7"           # Validation subject
-test_subjects="8-9"        # Held-out test subjects (RUS for these is only used at inference)
-method="multiscale_batch"
+subject_ids="1-8"          # All PAMAP subjects: per-subject RUS values
+train_subjects="1-5"       # Subjects used for training
+val_subjects="6"           # Validation subject
+test_subjects="7-8"        # Held-out test subjects (RUS for these is only used at inference)
+method="batch"
 max_lag=5
 discrim_epochs=30
 ce_epochs=20
@@ -35,9 +35,6 @@ python pamap_rus_multimodal.py \
     --n_batches $n_batches \
     --seed $seed
 
-# Train on $train_subjects, validate on $val_subjects, test on $test_subjects.
-# Each subject is paired with its own RUS values — RUS for val/test subjects is
-# only used at inference time, matching the raw-data split described in MERGE.
 python train_pamap_multimodal.py \
     --train_subjects $train_subjects \
     --val_subjects $val_subjects \
