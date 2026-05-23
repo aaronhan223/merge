@@ -1,4 +1,4 @@
-# Building Massively Multimodal Foundation Models with Dependency-Aware Experts
+# Building Massively Multimodal Foundation Models with Interaction-Aware Experts
 
 ## Requirements
 You can install them using:
