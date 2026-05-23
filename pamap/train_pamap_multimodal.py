@@ -18,6 +18,9 @@ from tqdm import tqdm
 from typing import Dict, Tuple, List, Optional, Set
 import pdb
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 try:
     from model.trus_moe_multimodal import MultimodalTRUSMoEModel
     from model.trus_moe_model import calculate_rus_losses, calculate_load_balancing_loss

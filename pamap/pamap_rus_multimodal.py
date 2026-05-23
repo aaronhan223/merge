@@ -6,6 +6,7 @@ import sys
 import argparse
 import torch
 import torch.nn as nn
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pid.temporal_pid_multivariate import multi_lag_analysis
 import matplotlib.pyplot as plt
 import itertools

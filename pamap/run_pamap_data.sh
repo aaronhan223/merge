@@ -5,14 +5,14 @@ subject_ids="1-9"          # All PAMAP subjects: per-subject RUS values
 train_subjects="1-6"       # Subjects used for training
 val_subjects="7"           # Validation subject
 test_subjects="8-9"        # Held-out test subjects (RUS for these is only used at inference)
-method="batch"
+method="multiscale_batch"
 max_lag=5
 discrim_epochs=30
 ce_epochs=20
 n_batches=1
 batch_size=512
 seed=42
-gpu=3
+gpu=2
 
 start_time=$(date +%s)
 
