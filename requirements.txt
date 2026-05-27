@@ -66,6 +66,8 @@ osqp==0.6.7.post3
 packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1733203243479/work
 pandarallel==1.6.5
 pandas==1.5.3
+opencv-python-headless
+pyarrow
 parso @ file:///home/conda/feedstock_root/build_artifacts/parso_1733271261340/work
 pexpect @ file:///home/conda/feedstock_root/build_artifacts/pexpect_1733301927746/work
 pickleshare @ file:///home/conda/feedstock_root/build_artifacts/pickleshare_1733327343728/work
@@ -93,6 +95,7 @@ qdldl==0.1.7.post5
 rdkit==2024.9.6
 requests==2.32.3
 scikit-learn==1.6.1
+scikit-image
 scipy==1.13.1
 scs==3.2.7.post2
 seaborn==0.13.2
@@ -106,9 +109,11 @@ sympy==1.13.1
 threadpoolctl==3.5.0
 torch==2.6.0
 torchaudio==2.6.0
+torchxrayvision
 torchvision==0.21.0
 tornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1732615921868/work
 tqdm==4.67.1
+transformers
 traitlets @ file:///home/conda/feedstock_root/build_artifacts/traitlets_1733367359838/work
 triton==3.2.0
 typing-inspection==0.4.0
